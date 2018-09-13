@@ -14,10 +14,10 @@ this.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open('v1').then(function(cache) {
             return cache.addAll([
-                '/Technical-tree/code/',
-                '/Technical-tree/code/index.html',
-                '/Technical-tree/code/app.js',
-                '/Technical-tree/code/timg.jpg'
+                '/Technical-tree/code/ServiceWorkers/',
+                '/Technical-tree/code/ServiceWorkers/index.html',
+                '/Technical-tree/code/ServiceWorkers/app.js',
+                '/Technical-tree/code/ServiceWorkers/timg.jpg'
             ])
         })
     )
