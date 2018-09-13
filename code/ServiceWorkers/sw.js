@@ -2,8 +2,8 @@ if ('serviceWorker' in navigator) {
     //环境特性检查
     console.log('zhichi ')
     navigator.serviceWorker
-        .register('/Technical-tree/ServiceWorkers/sw.js', {
-            scope: '/Technical-tree/ServiceWorkers/'
+        .register('/Technical-tree/code/ServiceWorkers/sw.js', {
+            scope: '/Technical-tree/code/ServiceWorkers/'
         })
         // scope可使用的域范围,即service worker 控制的内容的子目录
         .then(function(reg) {
