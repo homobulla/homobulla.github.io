@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>getUserMedia Demo</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .container {
+            position: relative;
+            max-width: 1080px;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <video id="video"></video>
+    </div>
+    <script>
+        -function () {
+
+            var video = document.querySelector('#video')
+            var myConstraints = {
+                video: {
+                    facingMode: 'user' // 优先调用前置摄像头
+                }
+            }
+
+            navigator.mediaDevices.getUserMedia(myConstraints).then((stream) => {
+                video.src = window.URL.createObjectURL(stream)
+                video.play()
+            }, (error) => {
+                console.error(error.name || error)
+                alert('本设备不支持或其他错误原因' + error.name)
+            })
+
+        }()
+    </script>
+</body>
+
+</html>
