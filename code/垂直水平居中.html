@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>垂直水平居中的1010中方式</title>
+    <style>
+        .wp {
+            border: 1px solid saddlebrown;
+            width: 350px;
+            height: 350px;
+            /* float: left; */
+        }
+
+        .size {
+            width: 100px;
+            height: 100px;
+            background: darkcyan;
+        }
+
+        /* 第一种 */
+        .wp1 {
+            position: relative;
+        }
+
+        .box1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+        }
+
+        /* 第二种 */
+        .box2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        /* 第三种 */
+        .box3 {
+            position: absolute;
+            ;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+        }
+
+        /* 第四种 */
+        .box4 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: darkcyan;
+        }
+
+        /* 第五种 */
+        .wp5 {
+            line-height: 300px;
+            text-align: center;
+            font-size: 0px;
+        }
+
+        .box5 {
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: initial;
+            text-align: left;
+            background: darkcyan;
+            /* 修正文字 */
+        }
+
+        /* 第六种 */
+        .wp6 {
+            writing-mode: vertical-lr;
+            text-align: center;
+        }
+
+        .wp-inner {
+            writing-mode: horizontal-tb;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
+
+        .box6 {
+            display: inline-block;
+            margin: auto;
+            text-align: left;
+            background: darkcyan;
+        }
+
+        /* 第七种 */
+        .wp7 {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle
+        }
+
+        .box7 {
+            display: inline-block;
+            background: darkcyan;
+
+        }
+
+        /* 第八种 */
+        .wp8 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 第九种 */
+        .wp9 {
+            display: grid;
+        }
+
+        .box9 {
+            align-self: center;
+            justify-self: center;
+            background: darkcyan;
+        }
+    </style>
+</head>
+
+<body>
+    <p>1</p>
+    <div class="wp wp1">
+        <div class="box1 size">
+            负margin
+        </div>
+    </div>
+    <p>2</p>
+    <div class="wp wp1">
+        <div class="box2 size">
+            四方定位法+auto
+        </div>
+    </div>
+    <p>3</p>
+    <div class="wp wp1">
+        <div class="box3 size">
+            css3 calc
+        </div>
+    </div>
+    <p>4</p>
+    <div class="wp wp1">
+        <div class="box4 ">不定宽高absolute + transform</div>
+    </div>
+    <p>5</p>
+    <div class="wp wp5">
+        <div class="box5">利用行内元素居中属性</div>
+    </div>
+    <p>6</p>
+    <div class="wp wp6">
+        <div class="wp-inner">
+            <div class="box6">123123</div>
+        </div>
+    </div>
+    <p>7</p>
+    <div class="wp wp7">
+        <div class="box7">css-table</div>
+    </div>
+    <p>8</p>
+    <div class="wp wp8">
+        <div class="size">flex</div>
+    </div>
+    <p>grid</p>
+    <div class="wp wp9">
+        <div class="box9">grid</div>
+    </div>
+
+</body>
+
+</html>
