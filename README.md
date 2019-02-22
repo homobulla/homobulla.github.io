@@ -8,6 +8,7 @@
     -   Webscoket
     -   地理位置
     -   GetUserMedia
+    -   Notification
 -   css
     -   盒模型
     -   居中与浮动
@@ -17,6 +18,7 @@
     -   原型和原型链
     -   作用域和闭包
     -   this 机制
+    -   对象操作
 -   算法
 
 -   浏览器
