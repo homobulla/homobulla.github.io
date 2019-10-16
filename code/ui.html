@@ -7,10 +7,14 @@
         <title>Document</title>
     </head>
     <body>
-        <iframe src="./getCu.html" frameborder="0" style="width: 600px;height:500px"></iframe>
+        <iframe src="./getCu.html" frameborder="0" style="width: 600px;height:500px" name="showui"></iframe>
+        <button onclick="p()">腹肌</button>
         <script>
             function demo() {
                 alert(11111);
+            }
+            function p() {
+                showui.window.getLocation();
             }
         </script>
     </body>
