@@ -33,7 +33,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.5.9
+        uses: JamesIves/github-pages-deploy-action@4.0.0
         with: 
           ACCESS_TOKEN: fe8c1bfc694204466594dda4b8833f57780472b2 
           BRANCH: gh-pages
