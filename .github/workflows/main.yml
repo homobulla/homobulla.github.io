@@ -33,9 +33,9 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.5.9  // 引用别人的部署插件
+        uses: JamesIves/github-pages-deploy-action@3.5.9
         with: 
-          ACCESS_TOKEN: ${{ fe8c1bfc694204466594dda4b8833f57780472b2  }}   // 这里需要设置成你的 token
+          ACCESS_TOKEN: fe8c1bfc694204466594dda4b8833f57780472b2 
           BRANCH: gh-pages
           FOLDER: docs/.vuepress/dist
 
