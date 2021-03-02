@@ -1,6 +1,7 @@
 // 自动获取文件名并添加路由
 const fs = require('fs')
-const url = 'E:/warriorjs/data/docs'
+const path = require('path');
+const url = path.resolve(__dirname,'../../','docs')
 // const files = fs.readdirSync('E:/warriorjs/data/docs/accumulate/HTML')
 
 // const ret = files.map(function(x) {
@@ -19,12 +20,12 @@ function returnName(str) {
 }
 module.exports = {
     title: 'Technical-tree',
-    description: '我与我周旋久，宁做我。',
+    description: '知识点文档',
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }] // 增加一个自定义的 favicon(网页标签的图标)
     ],
-    base: '/Technical-tree/', // 这是部署到github相关的配置
+    // base: '/', // 这是部署到github相关的配置
     markdown: {
         lineNumbers: true // 代码块显示行号
     },
@@ -37,7 +38,7 @@ module.exports = {
         nav: [
             { text: '前端', link: '/accumulate/' },
             { text: '算法', link: '/algorithm/' }, // 内部链接 以docs为根目录
-            { text: '博客', link: 'http://homobulla.site' }, // 外部链接
+            { text: '博客', link: 'https://homobulla.site' }, // 外部链接
             // 下拉列表
             {
                 text: 'GitHub',
